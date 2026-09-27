@@ -1,4 +1,3 @@
-Here is the clean, directly-rendered version of the **`OcrTextExtractor`** `README.md` ready to copy without the outer code block wrapper:
 
 ---
 
