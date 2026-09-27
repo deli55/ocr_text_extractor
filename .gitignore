@@ -1,0 +1,28 @@
+## Build and Output Directories
+bin/
+obj/
+out/
+publish/
+
+## User Settings & Runtime Config
+settings.json
+*.user
+*.userosscache
+*.sln.docstates
+
+## IDE Caches
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+
+## Temporary & MSBuild Files
+*_wpftmp.*
+*.tmp
+*.log
+
+## Package Caches
+.nuget/
+*.nupkg

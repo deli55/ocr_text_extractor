@@ -1,0 +1,20 @@
+<Window x:Class="OcrTextExtractor.SelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="#40000000"
+        Topmost="True"
+        ShowInTaskbar="False"
+        Cursor="Cross"
+        Focusable="True"
+        Loaded="WindowLoaded">
+    <Canvas x:Name="SelectionCanvas" Background="#40000000">
+        <Rectangle x:Name="SelectionRectangle"
+                   Stroke="Red"
+                   StrokeDashArray="2 2"
+                   StrokeThickness="2"
+                   Fill="#20FFFFFF"
+                   Visibility="Hidden"/>
+    </Canvas>
+</Window>

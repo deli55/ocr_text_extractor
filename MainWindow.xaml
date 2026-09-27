@@ -1,0 +1,77 @@
+﻿<Window x:Class="OcrTextExtractor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OcrTextExtractor"
+        mc:Ignorable="d"
+        Title="OCR Text Extractor" Height="480" Width="420"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        FontWeight="Normal" FontFamily="Segoe UI"
+        StateChanged="MainWindow_StateChanged"
+        Closing="MainWindow_Closing">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header Section -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock x:Name="TitleTextBlock" Text="OCR Text Extractor" 
+                       FontSize="18" FontWeight="SemiBold" Foreground="#007ACC"
+                       HorizontalAlignment="Center" Margin="0,0,0,8"/>
+            <Border Background="#F0F0F0" CornerRadius="4" Padding="8">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Ellipse Width="10" Height="10" Fill="Green" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="StatusText" Text="Ready" FontSize="12" 
+                               Foreground="#333333" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <!-- Action Buttons Section -->
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <Button x:Name="BtnOcrRegion" Content="OCR Specific Part        [F1]"
+                    Height="40" FontSize="13" Margin="0,0,0,6" Click="BtnOcrRegion_Click"/>
+            <Button x:Name="BtnOcrFullscreen" Content="OCR Entire Screen        [F2]"
+                    Height="40" FontSize="13" Click="BtnOcrFullscreen_Click"/>
+            <TextBlock x:Name="GlobalHotkeyHint" Text="Global hotkeys work even when another window is focused."
+                       FontSize="9" Foreground="Gray" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- Hotkey Configuration Section -->
+        <StackPanel Grid.Row="2" Margin="0,0,0,10">
+            <Button x:Name="BtnChangeRegionHotkey" Content="Change Region Hotkey (Current: F1)"
+                    Height="32" FontSize="11" Margin="0,0,0,6" Click="BtnChangeRegionHotkey_Click"/>
+            <Button x:Name="BtnChangeFullscreenHotkey" Content="Change Fullscreen Hotkey (Current: F2)"
+                    Height="32" FontSize="11" Click="BtnChangeFullscreenHotkey_Click"/>
+        </StackPanel>
+
+        <!-- Text Output Area -->
+        <StackPanel Grid.Row="3" Margin="0,0,0,10">
+            <TextBlock Text="Extracted Text:" FontSize="11" FontWeight="SemiBold" 
+                       Foreground="#333333" Margin="0,0,0,5"/>
+            <TextBox x:Name="OutputTextBox" Text="" 
+                     IsReadOnly="True"
+                     VerticalScrollBarVisibility="Auto" 
+                     Background="#F8F8F8" BorderBrush="#CCCCCC"
+                     FontFamily="Consolas" FontSize="12"
+                     TextWrapping="Wrap"
+                     Height="150"/>
+        </StackPanel>
+
+        <!-- Bottom Controls -->
+        <StackPanel Grid.Row="4">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <Button x:Name="BtnCopy" Content="Copy to Clipboard" 
+                        Height="32" FontSize="12" MinWidth="140" Click="BtnCopy_Click"/>
+            </StackPanel>
+            <CheckBox x:Name="AutoCopyCheckbox" Content="Auto-copy extracted text to clipboard"
+                      FontSize="11" IsChecked="True" Foreground="#333333" Checked="AutoCopyCheckbox_Checked" Unchecked="AutoCopyCheckbox_Unchecked"/>
+        </StackPanel>
+    </Grid>
+</Window>
