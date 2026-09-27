@@ -1,6 +1,4 @@
 
----
-
 # OcrTextExtractor
 
 A high-performance, lightweight, system-wide Windows desktop utility built in **.NET 8 (WPF)** for instant screen-to-text extraction. Utilizing native **Windows Runtime OCR (`Windows.Media.Ocr`)**, low-level **Win32 global key hooks**, and a **hardware-accelerated multi-monitor selection overlay**, `OcrTextExtractor` allows users to capture any on-screen text via customizable global hotkeys and copy it directly to the clipboard in under 100 milliseconds.
