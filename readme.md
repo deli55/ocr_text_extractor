@@ -1,5 +1,3 @@
-Here is the updated `README.md` reflecting **F1** (Region OCR) and **F2** (Fullscreen OCR) as the default hotkeys:
-
 ```markdown
 # OcrTextExtractor
 
