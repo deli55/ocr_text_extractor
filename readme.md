@@ -1,4 +1,7 @@
-```markdown
+Here is the clean, directly-rendered version of the **`OcrTextExtractor`** `README.md` ready to copy without the outer code block wrapper:
+
+---
+
 # OcrTextExtractor
 
 A high-performance, lightweight, system-wide Windows desktop utility built in **.NET 8 (WPF)** for instant screen-to-text extraction. Utilizing native **Windows Runtime OCR (`Windows.Media.Ocr`)**, low-level **Win32 global key hooks**, and a **hardware-accelerated multi-monitor selection overlay**, `OcrTextExtractor` allows users to capture any on-screen text via customizable global hotkeys and copy it directly to the clipboard in under 100 milliseconds.
@@ -62,7 +65,7 @@ Designed to run silently as a background system tray utility with minimal memory
 
 1. **Clone the repository:**
 ```powershell
-git clone [https://github.com/your-username/OcrTextExtractor.git](https://github.com/your-username/OcrTextExtractor.git)
+git clone https://github.com/your-username/OcrTextExtractor.git
 cd OcrTextExtractor
 
 ```
@@ -160,12 +163,3 @@ Settings persist automatically upon modification and are loaded on application s
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-```
-
-<ElicitationsGroup message="What would you like to work on next?">
-  <Elicitation label="Initialize Git repo & create initial commit" query="Provide the PowerShell commands to initialize a git repository, add a .gitignore for .NET WPF, and create the initial commit."/>
-  <Elicitation label="Start Project #2: Zero-Allocation Game Archive Parser" query="Let's start the second C# project: a zero-allocation game asset/script binary archive parser using Span<T"> and MemoryMappedFile." />
-</ElicitationsGroup>
-
-```
